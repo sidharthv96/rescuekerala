@@ -1,31 +1,31 @@
 from django.db import models
 
-districts = (
-    ('tvm','Thiruvananthapuram'),
-    ('ptm','Pathanamthitta'),
+districts = (    
     ('alp','Alappuzha'),
-    ('ktm','Kottayam'),
+    ('ekm','Ernakulam'),
     ('idk','Idukki'),
-    ('mpm','Malappuram'),
-    ('koz','Kozhikode'),
-    ('wnd','Wayanad'),
     ('knr','Kannur'),
     ('ksr','Kasaragod'),
-    ('pkd','Palakkad'),
-    ('tcr','Thrissur'),
-    ('ekm','Ernakulam'),
     ('kol','Kollam'),
+    ('ktm','Kottayam'),
+    ('koz','Kozhikode'),
+    ('mpm','Malappuram'),
+    ('pkd','Palakkad'),
+    ('ptm','Pathanamthitta'),
+    ('tvm','Thiruvananthapuram'),
+    ('tcr','Thrissur'),
+    ('wnd','Wayanad')
 )
 
 status_types =(
     ('new', 'New'),
     ('pro', 'In progess'),
-    ('sup', 'Supplied'),
+    ('sup', 'Supplied')
 )
 
 contrib_status_types =(
     ('new', 'New'),
-    ('ful', 'Fullfilled'),
+    ('ful', 'Fullfilled')
 )
 
 vol_categories = (
@@ -46,7 +46,7 @@ class Request(models.Model):
     district = models.CharField(
         max_length = 15,
         choices = districts,
-        verbose_name='Districts - ജില്ല'
+        verbose_name='District - ജില്ല'
     )
     location = models.CharField(max_length=500,verbose_name='Location - സ്ഥലം')
     requestee = models.CharField(max_length=100,verbose_name='Requestee - അപേക്ഷകന്‍റെ പേര്')
