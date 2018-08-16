@@ -55,23 +55,26 @@ cp .env.example .env
 Install dependencies
 
 ```
-pip3 install -r requirements.txt
+pip3 install pipenv
+pipenv --python 3.7
+pipenv install
+pipenv shell
 ```
 
 Run Database migrations
 
 ```
-python3 manage.py migrate
+python manage.py migrate
 ```
 
 Setup staticfiles
 ```
-python3 manage.py collectstatic
+python manage.py collectstatic
 ```
 
 Run the server
 
 ```
-python3 manage.py runserver
+python manage.py runserver
 ```
 Now open localhost:8000 in the browser
